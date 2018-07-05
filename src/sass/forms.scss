@@ -1,0 +1,293 @@
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], select, textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #e8eaeb;
+  margin-bottom: 3rem;
+  color: #717171;
+  position: relative;
+
+  @media(max-width: 767px) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.form-switch {
+  margin-top: 15px;
+  cursor: pointer;
+
+
+  .label {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 300;
+    position: relative;
+    margin-left: 10px;
+    top: -8px;cursor: pointer;
+  }
+
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+
+    input {display:none;}
+  }
+
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    @include transition(0.4s);
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 21px;
+      width: 21px;
+      left: 3px;
+      bottom: 2px;
+      border-radius: 50%;
+      background-color: white;
+      @include transition(0.4s);
+    }
+  }
+
+
+  &.active {
+    .switch {
+      input + .slider {background-color: $gold;}
+      input + .slider:before {@include translateX(23px);}
+    }
+  }
+}
+
+
+.input-animation {
+
+  position: relative;
+  label {
+    position: relative;
+    top: 35px;
+    display: block;
+    z-index: 0;
+    @include transition(0.3s);
+  }
+
+  &.active {
+    label {
+      top: 0px;
+      color: $gold;
+      @include transition(0.3s);
+    }
+
+    &:after {
+      position: absolute;
+      right: 0;
+      width: 100%;
+      @include transition(0.3s);
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    height: 2px;
+    width: 0;
+    background-color: $gold;
+    @include transition(0.3s);
+  }
+
+  &.textarea:after {
+    bottom: 38px;
+  }
+
+  @media(max-width: 767px) {
+    &:after {
+      bottom: 15px;
+    }
+
+    &.textarea:after {
+      bottom: 23px;
+    }
+  }
+
+
+}
+
+input[type=submit], button {
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none
+}
+
+textarea {
+  height: 70px;
+}
+
+
+input, select, textarea, button {
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+
+
+.form-inline {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+
+  .label {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30%;
+    padding-right: 15px;
+  }
+
+  .input {
+    display: table-cell;
+    vertical-align: middle;
+    width: 70%;
+  }
+
+  &.valign-top .label {vertical-align: top;}
+
+
+  @media(max-width: 767px) {
+    display: block;
+    .label {margin-bottom: 10px;}
+    .label, .input {display: block;width: 100%;}
+  }
+}
+
+
+.form-block {
+  margin-bottom: 25px;
+  .label {margin-bottom: 10px;}
+}
+
+
+.fieldset-inline {
+  display: block;
+  margin-bottom: 20px;
+
+  .label {
+    float: left;
+    width: 30%;
+  }
+
+  .input {
+    float: right;
+    width: 70%;
+  }
+
+  @media(max-width: 767px) {
+    .label {margin-bottom: 10px;}
+    .label, .input {display: block;width: 100%;float: none;}
+  }
+}
+
+
+.fieldset-block {
+  display: block;
+  margin-bottom: 25px;
+
+  .label {margin-bottom: 10px;}
+
+}
+
+
+.form-check {
+  position: relative;
+  display: block;
+  margin-bottom: .5rem;
+
+  &.inline-block {margin-right: 20px;}
+
+  label {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+    cursor: pointer;
+
+    input {
+      margin-top: .25rem;
+      margin-left: -1.25rem;
+      width: auto;
+    }
+
+    input:only-child{
+      position: static;
+    }
+  }
+
+
+}
+
+
+
+.custom-input-number {
+  @include flex-container();
+  flex-wrap: wrap;
+
+  .minus, .plus {
+    flex: 0 0 25%;
+    max-width: 25%;
+    color: #ffffff;
+    font-weight: 900;
+    @include transition(0.2s);
+
+    &:hover {
+      background-color: $gold;
+      @include transition(0.2s);
+    }
+  }
+
+  .minus {border-radius: 5px 0 0 5px;}
+  .plus {border-radius: 0 5px 5px 0;}
+
+  input {
+    flex: 0 0 35%;
+    max-width: 35%;
+    margin: 0;
+    border: 0;
+    text-align: center;
+    pointer-events: none;
+  }
+
+
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance:textfield;
+  }
+}

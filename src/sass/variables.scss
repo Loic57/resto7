@@ -1,0 +1,144 @@
+
+/********** GENERAL **********/
+$font-family:                     "Open Sans", sans-serif;
+$icon-font-family:                "FontAwesome", sans-serif;
+$path:                            "../images";
+
+$main-color:                      #53b4eb;
+$main-color-hover:                darken($main-color, 15%);
+$main-color-darkest:              darken($main-color, 45%);
+$main-color-darker:               darken($main-color, 30%);
+$main-color-dark:                 darken($main-color, 15%);
+$main-color-light:                lighten($main-color, 15%);
+$main-color-lighter:              lighten($main-color, 30%);
+$main-color-lightest:             lighten($main-color, 45%);
+
+$width-wrapper:                   1170px;
+
+$gray-darkest:                    #626262;
+$gray-darker:                     #7e7e7e;
+$gray-dark:                       #8f8f8f;
+$gray:                            #a3a3a3;
+$gray-light:                      #b9b9b9;
+$gray-lighter:                    #d7d7d7;
+$gray-lightest:                   #eeeeee;
+
+$green:                           #5cb85c;
+$blue:                            #5bc0de;
+$yellow:                          #f0ad4e;
+$red:                             #d9534f;
+$gold:                            #c39e5a;
+
+$body-bg:                         #f7f7f7;
+$color-text:                      #797979;
+$font-size-main:                  62.5%;
+$font-size-main-rem:              1.6rem;
+$line-height:                     1.7;
+/********** GENERAL **********/
+
+
+/********** HEADER **********/
+$page-nav-width-collapsed: 60px;
+$page-nav-width: 300px;
+
+$page-nav-settings-width: 300px;
+$logo-header-width: 138px;
+
+$header-bg: #ffffff;
+/********** HEADER **********/
+
+
+
+
+
+
+/********* TEXTS **********/
+$margin-bottom-p:                 30px;
+
+
+$padding-title:                   15px;
+
+$font-size-H1:                    3.6rem;
+$font-weight-H1:                  700;
+$margin-top-H1:                   0;
+$margin-bottom-H1:                10px;
+$color-H1:                        #343434;
+
+$font-size-H2:                    3.6rem;
+$font-weight-H2:                  800;
+$margin-top-H2:                   -10px;
+$margin-bottom-H2:                10px;
+$color-H2:                        #413f40;
+
+$font-size-H3:                    2.6rem;
+$font-weight-H3:                  600;
+$margin-top-H3:                   0; 
+$margin-bottom-H3:                10px;
+$color-H3:                        #343434;
+
+$font-size-H4:                    2.4rem;
+$font-weight-H4:                  600;
+$margin-top-H4:                   0;
+$margin-bottom-H4:                10px;
+$color-H4:                        #343434;
+
+$font-size-H5:                    1.8rem;
+$font-weight-H5:                  600;
+$margin-top-H5:                   0;
+$margin-bottom-H5:                10px;
+$color-H5:                        #343434;
+
+$font-size-H6:                    1.6rem;
+$font-weight-H6:                  500;
+$margin-top-H6:                   0;
+$margin-bottom-H6:                15px;
+$color-H6:                        #343434;
+
+$font-size-subtitle:              1.4rem;
+$font-weight-subtitle:            300;
+$margin-left-subtitle:            15px;
+$padding-subtitle:                3px 10px;
+$color-subtitle:                  #ffffff;
+$bg-subtitle:                     $gray-light;
+/********* TEXTS **********/
+
+
+
+/********** BTN **********/
+
+$icon-add:                 "\f0fe";
+$icon-delete:              "\f1f8";
+$icon-infos:               "\f05a";
+$icon-warning:             "\f071";
+$icon-send:                "\f1d8";
+$icon-link:                "\f08e";
+$icon-cancel:              "\f0e2";
+$icon-dl:                  "\f019";
+$icon-arrow-left:          "\f104";
+$icon-arrow-right:         "\f105";
+$icon-arrow-top:           "\f106";
+$icon-arrow-bottom:        "\f107";
+/********** BTN **********/
+
+
+
+/********* grid-flex **********/
+$margin-grid-flex:                     0 -15px;
+$margin-top-grid-flex:                 50px;
+$padding-columns:                 0 15px;
+
+$width-column-10:                 10%;
+$width-column-20:                 20%;
+$width-column-25:                 25%;
+$width-column-30:                 30%;
+$width-column-33:                 33.3333%;
+$width-column-40:                 40%;
+$width-column-50:                 50%;
+$width-column-60:                 60%;
+$width-column-66:                 66.6666%;
+$width-column-70:                 70%;
+$width-column-75:                 75%;
+$width-column-80:                 80%;
+$width-column-90:                 90%;
+$width-column-100:                100%;
+/********* grid-flex **********/

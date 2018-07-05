@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('../icons/icons.eot?632agf');
+  src:  url('../icons/icons.eot?632agf#iefix') format('embedded-opentype'),
+    url('../icons/icons.ttf?632agf') format('truetype'),
+    url('../icons/icons.woff?632agf') format('woff'),
+    url('../icons/icons.svg?632agf#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*="icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-minus:after {
+  content: "\e900";
+}
+.icon-angle-down:after {
+  content: "\e901";
+} 
+.icon-angle-left:after {
+  content: "\e902";
+}
+.icon-angle-right:after {
+  content: "\e903";
+}
+.icon-angle-up:after {
+  content: "\e904";
+}
+.icon-basket:after {
+  content: "\e905";
+}
+.icon-check:after {
+  content: "\e906";
+}
+.icon-chicken:after {
+  content: "\e907";
+}
+.icon-cross:after {
+  content: "\e908";
+}
+.icon-doubleangle-left:after {
+  content: "\e909";
+}
+.icon-doubleangle-right:after {
+  content: "\e90a";
+}
+.icon-down:after {
+  content: "\e90b";
+}
+.icon-enveloppe:after {
+  content: "\e90c";
+}
+.icon-fish:after {
+  content: "\e90d";
+}
+.icon-frog:after {
+  content: "\e90e";
+}
+.icon-noodles:after {
+  content: "\e90f";
+}
+.icon-plus:after {
+  content: "\e910";
+}
+.icon-salad:after {
+  content: "\e911";
+}
+.icon-star:after {
+  content: "\e912";
+}
+.icon-trash:after {
+  content: "\e913";
+  color: #6f707e;
+}
+.icon-user:after {
+  content: "\e914";
+}
+.icon-quote-left:after {
+  content: "\e915";
+}

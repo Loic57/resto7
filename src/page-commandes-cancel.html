@@ -1,0 +1,147 @@
+<!-- @@include includes/header-admin.html -->
+
+<div class="page-content">
+  <div class="page-top">
+    <div class="grid-flex v-align-middle">
+      <div class="column">
+        <h2>Commandes refusées</h2>
+      </div>
+      <div class="column text-right">
+        <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-flex grid-commandes">
+    <div class="column w-33">
+      <div class="box-commande">
+        <div class="time">18h45 <i class="far fa-clock"></i></div>
+        <span>Commande de</span>
+        <p class="name">SCIAMPAGNA Loïc</p>
+        <button type="button" class="btn bg-blue inverse trigger-open-modal" data-modal="voirCommande"><i class="fas fa-eye"></i></button>
+        <button type="button" class="btn bg-green inverse trigger-open-modal" data-modal="reloadCommande"><i class="fas fa-sync-alt"></i></button>
+        <div class="price">
+          <span>5 plats pour</span>
+          <div>35,40 €</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-modals">
+  <div class="btn-close-modal trigger-close-modal"><i class="icon-cross"></i></div>
+  <div class="box-modal commande" data-modal="voirCommande">
+    <div class="btn-close-modal trigger-close-modal"><i class="icon-cross"></i></div>
+    <div class="grid-flex v-align-middle mb-3 header">
+      <div class="column">
+        <span class="order-for">Commande de</span>
+        <h2>SCIAMPAGNA Loïc</h2>
+      </div>
+      <div class="column">
+        <ul class="infos-contact">
+          <li>+33 6 64 50 27 70 <i class="fas fa-phone"></i></li>
+          <li><a href="mailto:l.sciampagna@live.fr">l.sciampagna@live.fr</a> <i class="fas fa-envelope"></i></li>
+          <li>18h45 <i class="fas fa-clock"></i></li>
+        </ul>
+      </div>
+    </div>
+    <form class="table-basket-content">
+      <div class="grid-flex v-align-middle">
+        <div class="column w-50">
+          <div class="box-food">
+            <div class="column-left" style="background-image:url('images/visual-food-1.jpg');"></div>
+            <div class="column-right">
+              <div class="title">Poulet aux pousses de bambou</div>
+              <div class="footer mt-0 font-size-14">
+                Accompagnement :&nbsp;<em>Riz</em> <br  />
+                Quantité :&nbsp;<em>3</em>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column w-50">
+          <div class="box-food">
+            <div class="column-left" style="background-image:url('images/visual-food-3.jpg');"></div>
+            <div class="column-right">
+              <div class="title">Poulet aux ananas</div>
+              <div class="footer mt-0 font-size-14">
+                Accompagnement :&nbsp;<em>Nouilles</em> <br  />
+                Quantité :&nbsp;<em>1</em>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column w-50">
+          <div class="box-food">
+            <div class="column-left" style="background-image:url('images/visual-food-5.jpg');"></div>
+            <div class="column-right">
+              <div class="title">Ribs de porc au caramel</div>
+              <div class="footer mt-0 font-size-14">
+                Accompagnement :&nbsp;<em>Nouilles</em> <br  />
+                Quantité :&nbsp;<em>1</em>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column w-50">
+          <div class="box-food">
+            <div class="column-left" style="background-image:url('images/visual-food-8.jpg');"></div>
+            <div class="column-right">
+              <div class="title">Canard au citron</div>
+              <div class="footer mt-0 font-size-14">
+                Accompagnement :&nbsp;<em>Nouilles</em> <br  />
+                Quantité :&nbsp;<em>1</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="total-commande text-right mb-2 font-size-20"><b>Total de la commande : 30,40 €</b></div>
+    </form>
+  </div>
+
+  <div class="box-modal commande" data-modal="reloadCommande">
+    <div class="btn-close-modal trigger-close-modal"><i class="icon-cross"></i></div>
+    <div class="grid-flex v-align-middle mb-3 header">
+      <div class="column">
+        <span class="order-for">Accepter la commande de</span>
+        <h2>SCIAMPAGNA Loïc</h2>
+      </div>
+      <div class="column">
+        <ul class="infos-contact">
+          <li>+33 6 64 50 27 70 <i class="fas fa-phone"></i></li>
+          <li><a href="mailto:l.sciampagna@live.fr">l.sciampagna@live.fr</a> <i class="fas fa-envelope"></i></li>
+          <li>18h45 <i class="fas fa-clock"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="form-1 table-basket-content">
+      <p>
+        Etes-vous sur de vouloir replacer cette commande dans les commandes en cours ? Un SMS et un email seront envoyés à votre client pour l'informer que sa commande a finalement été acceptée.
+      </p>
+      <div class="text-right mt-3">
+        <button class="btn bg-gold inverse c-gold mr-2 trigger-close-modal" type="button">Annuler</button>
+        <button class="btn bg-gold inverse c-gold" type="submit">Confirmer</button>
+      </div>
+
+      <!--<div class="box-message bg-green mt-3">
+        La commande a bien été confirmée, votre client a reçu un SMS et un email pour lui confirmer sa commande.
+      </div>-->
+    </form>
+  </div>
+
+  <div class="box-modal commande" data-modal="stopCommande">
+    <div class="btn-close-modal trigger-close-modal"><i class="icon-cross"></i></div>
+    <h2>Desactiver les commandes</h2>
+
+    <p>Etes-vous sur de vouloir desactiver les commandes ? Les client connectés au site web ne pourront plus passer de commandes en ligne, mais il sera toujours possible de les passer par téléphone.</p>
+
+    <div class="text-right mt-3">
+      <button class="btn bg-gold inverse c-gold mr-2 trigger-close-modal" type="button">Annuler</button>
+      <button class="btn bg-gold inverse c-gold" type="submit" id="btnStopCommandes">Confirmer</button>
+    </div>
+  </div>
+</div>

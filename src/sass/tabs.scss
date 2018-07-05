@@ -1,0 +1,91 @@
+.tabs-wrapper {
+
+  .state {
+    position: absolute;
+    left: -10000px;
+  }
+
+  .flex-tabs {
+    @include flex-container();
+
+    @include flex-wrap(wrap);
+
+    .tabs-content {
+      background-color: #fff;
+      padding: 20px;
+      display: none;
+      width: 100%;
+      @include flex-basis(auto);
+      border: 1px solid $gray-lighter;
+    
+    }
+
+    .tab-header {
+      display: inline-block;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #000000;
+      border: 1px solid $gray-lighter;
+      border-left: 0;
+      border-bottom: 1px solid transparent;
+      margin-bottom: -1px;
+      position: relative;
+      z-index: 1;
+      background-color: $gray-lighter;
+      @include transition(0.2s);
+      &:first-child {border-left: 1px solid $gray-lighter;}
+
+      &:hover {background-color: $gray;@include transition(0.2s);}
+    }
+  }
+}
+
+
+
+
+
+
+#tab-one:checked ~ .tabs #tab-one-label, #tab-two:checked ~ .tabs #tab-two-label, #tab-three:checked ~ .tabs #tab-three-label, #tab-four:checked ~ .tabs #tab-four-label {
+  border-bottom: 1px solid #ffffff;
+  background-color: #ffffff;
+}
+
+#tab-one:checked ~ .tabs #tab-one-panel, #tab-two:checked ~ .tabs #tab-two-panel, #tab-three:checked ~ .tabs #tab-three-panel, #tab-four:checked ~ .tabs #tab-four-panel { display: block; }
+
+
+
+@media (max-width: 600px) {
+
+  .tabs-wrapper {
+    .flex-tabs {
+      @include flex-orientation-column();
+      .tabs-content {
+        background-color: #ffffff;
+        border-bottom: 0;
+        &:last-child {border-bottom: 1px solid $gray-lighter;}
+      }
+
+      .tab-header {
+        background: #fff;
+        border: 1px solid $gray-lighter!important;
+        &:last-of-type {border-bottom: none;}
+      }
+
+      #tab-one-label {@include flex-order(1);}
+      #tab-one-panel {@include flex-order(2);}
+
+      #tab-two-label {@include flex-order(3);}
+      #tab-two-panel {@include flex-order(4);}
+
+      #tab-three-label {@include flex-order(5);}
+      #tab-three-panel {@include flex-order(6);}
+
+      #tab-four-label {@include flex-order(7);}
+      #tab-four-panel {@include flex-order(8);}
+    }
+  }
+
+  #tab-one:checked ~ .tabs #tab-one-label,  #tab-two:checked ~ .tabs #tab-two-label,  #tab-three:checked ~ .tabs #tab-three-label,  #tab-four:checked ~ .tabs #tab-four-label {background-color: $gray-lighter; }
+}

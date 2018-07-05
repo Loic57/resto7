@@ -1,0 +1,239 @@
+.btn {
+  display: inline-block;
+  padding: 1.5rem 3.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  font-weight: 300;
+  font-size: 1.6rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  border-radius: 5px;
+  @include transition(0.2s);
+
+  &[class*=icon-] {
+    padding: 1rem 5rem 1rem 2rem;
+    font-family: $font-family!important;
+
+    &.left {
+      padding: 1rem 2rem 1rem 5rem;
+      &:after {
+        right: auto;
+        left: 19px;
+      }
+    }
+  }
+
+  &:after {
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    @include translateY(-50%);
+    font-family: 'icons';
+    font-size: 18px;
+  }
+
+  &:hover {@include transition(0.2s);}
+
+  &.bg-blue {
+    &:hover, &:visited, &:focus {background-color: darken($blue, 20%);}
+  }
+
+  &.bg-red {
+    &:hover, &:visited, &:focus {background-color: darken($red, 20%);}
+  }
+
+  &.bg-green {
+    &:hover, &:visited, &:focus {background-color: darken($green, 20%);}
+  } 
+
+  &.bg-gold.inverse {
+    &:hover{background-color: $gold;color: #ffffff!important;}
+  } 
+
+  &.bg-yellow {
+    &:hover, &:visited, &:focus {background-color: darken($yellow, 20%);}
+  }
+
+  &.bg-gray-darkest {
+    &:hover, &:visited, &:focus {background-color: darken($gray-darkest, 20%);}
+  }
+
+  &.bg-gray-darker {
+    &:hover, &:visited, &:focus {background-color: darken($gray-darker, 20%);}
+  }
+
+  &.bg-gray-dark {
+    &:hover, &:visited, &:focus {background-color: darken($gray-dark, 20%);}
+  }
+
+  &.bg-gray {
+    &:hover, &:visited, &:focus {background-color: darken($gray, 20%);} 
+  }
+
+  &.bg-gray-light {
+    &:hover, &:visited, &:focus {background-color: darken($gray-light, 20%);}
+  }
+
+  &.bg-gray-lighter {
+    &:hover, &:visited, &:focus {background-color: darken($gray-lighter, 20%);}
+  }
+
+  &.bg-gray-lightest {
+    &:hover, &:visited, &:focus {background-color: darken($gray-lightest, 20%);}
+  }
+
+  &.bg-main-color-darkest {
+    &:hover, &:visited, &:focus {background-color: darken($main-color-darkest, 20%);}
+  }
+
+  &.bg-main-color-darker {
+    &:hover, &:visited, &:focus {background-color: darken($main-color-darker, 20%);}
+  }
+
+  &.bg-main-color-dark {
+    &:hover, &:visited, &:focus {background-color: darken($main-color-dark, 20%);}
+  }
+
+  &.bg-main-color {
+    &:hover, &:visited, &:focus {background-color: darken($main-color, 20%);} 
+  }
+
+  &.bg-main-color-light {
+    &:hover, &:visited, &:focus {background-color: darken($main-color-light, 20%);}
+  }
+
+  &.bg-main-color-lighter {
+    &:hover, &:visited, &:focus {background-color: darken($main-color-lighter, 20%);}
+  }
+
+  &.bg-main-color-lightest {
+    &:hover, &:visited, &:focus {background-color: darken($main-color-lightest, 20%);}
+  }
+
+  &.big {  
+    font-size: 2rem;
+    padding: 1.5rem 4rem;
+    &[class*=icon-] {padding: 1.5rem 7rem 1.5rem 3rem}
+
+
+    &:after {
+      right: 24px;
+      //top: 10px;
+      font-size: 24px;
+    }
+  }
+
+  &.inverse {
+    &.bg-blue {
+      border-color: $blue;
+      color: $blue;
+      background-color: #ffffff;
+    }
+    &.bg-red {
+      border-color: $red;
+      color: $red;
+      background-color: #ffffff;
+    }
+    &.bg-green {
+      border-color: $green;
+      color: $green;
+      background-color: #ffffff;
+    }
+    &.bg-yellow {
+      border-color: $yellow;
+      color: $yellow;
+      background-color: #ffffff;
+    }
+
+    &.bg-white {
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+
+    &.bg-gold {
+      border-color: $gold;
+      color: $gold; 
+      background: none;
+    }
+
+    &.bg-main-color {
+      border-color: $main-color;
+      color: $main-color;
+      background-color: #ffffff;
+    }
+
+    
+    font-weight: 500;
+
+    &:hover, &:visited, &:focus {
+      color: #ffffff;
+
+      &.bg-blue {
+        border-color: $blue;
+        color: #ffffff;
+        background-color: $blue;
+      }
+      &.bg-red {
+        border-color: $red;
+        color: #ffffff;
+        background-color: $red;
+      }
+      &.bg-green {
+        border-color: $green;
+        color: #ffffff;
+        background-color: $green;
+      }
+      &.bg-yellow {
+        border-color: $yellow;
+        color: #ffffff;
+        background-color: $yellow;
+      }
+
+      &.bg-white {
+        border-color: #ffffff;
+        color: #ffffff;
+      }
+
+      &.bg-main-color {
+        border-color: $main-color-light;
+        color: #ffffff;
+        background-color: $main-color-light;
+      }
+    }
+  }
+
+  &:disabled, &.disabled {
+    pointer-events: none;
+    background-color: $gray;
+
+    &.inverse {
+      background-color: #ffffff;
+      border: 1px solid $gray;
+      color: $gray;
+    }
+  } 
+}
+
+
+
+.btn-group {
+
+  &.vertical {
+    @include flex-container();
+    @include flex-orientation-column();
+    display: inline-flex;
+
+    .btn {
+      margin-left: 0!important;
+      &:first-child {border-radius: 3px 3px 0 0;}
+      &:last-child {border-radius: 0 0 3px 3px;}
+    }
+
+  }
+  .btn {
+    margin-left: -4px;
+    &:first-child {margin-left: 0;border-radius: 3px 0 0 3px}
+    &:last-child {border-radius: 0 3px 3px 0;}
+  }
+}

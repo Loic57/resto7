@@ -1,0 +1,122 @@
+ul.list-1 {
+   li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+
+    &:before {
+      @include position(absolute, 0, auto, auto, 0);
+      content: "\f105";
+      font-family: $icon-font-family;
+      color: $main-color;
+    }
+
+    ul {margin-top: 1rem;}
+  }
+}
+
+ol.list-1 {
+  list-style-type: decimal;
+
+  li {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  ol {margin-top: 1rem;list-style-type: decimal;}
+}
+
+.list-1 {
+  a {text-decoration: underline;}
+}
+
+
+dl {
+  @include flex-container();
+  flex-wrap: wrap;
+
+
+  dt {
+    width: 33.33333%;
+    font-weight: 700;
+    color: #000000;
+  }
+
+
+  dd {width: 66.66666%;margin-bottom: 1rem;}
+}
+
+
+.nav-breadcrumb {
+  li {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+    font-size: 1.6rem;
+    &:after {
+      position: absolute;
+      right: -15px;
+      top: 0;
+      font-family: $icon-font-family;
+      content: $icon-arrow-right;
+    }
+
+    &:last-child
+    {
+      &:after {content: none;}
+      a {cursor: default;pointer-events: none;}
+    }
+    a {
+      color: $gray;
+      &:hover {text-decoration: underline;}
+    }
+  }
+}
+
+.list-social {
+  li {
+    display: inline-block;
+    margin-right: 2rem;
+    &:last-child {margin: 0;}
+    a {
+      display: block;
+      color: $color-text;
+      font-size: 2.4rem;
+      @include transition(0.2s);
+
+      &:hover {
+        color: $gold;
+        @include transition(0.2s);
+      }
+    }
+  }
+}
+
+
+.list-commandes {
+  li {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px -4px rgba(0,0,0,0.15);
+
+    &:nth-child(even) {
+      background-color: #ef95160f;
+    }
+
+
+    .name {color: $gray-darkest;font-weight: 700;margin-bottom: 0;}
+
+    .time {
+      color: $gray;
+    }
+
+    button {
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      margin-right: 1rem;
+    }
+  }
+
+}
